@@ -7,7 +7,6 @@
       end
     %></p>
 
-<p>You have <%= @num_transactions%> transactions</p>
 
 <table>
   <thead>
@@ -30,5 +29,7 @@
 </table>
 
 <br>
+
+<p>You have performed <%= @num_transactions%> transactions</p>
 
 <%= link_to 'New Transaction', new_transaction_path %>

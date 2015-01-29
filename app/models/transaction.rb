@@ -9,11 +9,7 @@ class Transaction < ActiveRecord::Base
     balance= deposit_array.reduce(:+)
     return balance
   end
-  #
-  # def self.get_deposit(deposit)
-  #   if deposit
-  #   @deposit= deposit
-  # end
+
 
 
 end
