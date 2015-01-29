@@ -1,7 +1,7 @@
 <h1>Transactions</h1>
 
-<h2> Total </h2>
-<p>Your total is $<%= @balance %></p>
+<h3> Total </h3>
+<p>Your total is <%= number_to_currency(@balance) %></p>
 <p><%= if @balance < 0
         "I feel bad for you. Please make more money."
       end
@@ -19,7 +19,7 @@
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr>
-        <td><%= transaction.deposit %></td>
+        <td><%= number_to_currency(transaction.deposit) %></td>
         <td><%= link_to 'Show', transaction %></td>
         <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
         <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
